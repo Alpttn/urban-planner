@@ -34,7 +34,18 @@ namespace Planner
             FiveOneTwoNine.Purchase("Penguin");
             FiveOneTwoSeven.Purchase("Jim Gordon");
 
-            foreach (Building building in city)
+            City gotham = new City()
+            {
+                NameOfCity = "Gotham",
+                YearEstablished = 2019,
+                Mayor = "The Riddler"
+            };
+
+            gotham.Buildings.Add(FiveOneTwoEigth);
+            gotham.Buildings.Add(FiveOneTwoNine);
+            gotham.Buildings.Add(FiveOneTwoSeven);
+
+            foreach (Building building in gotham.Buildings)
             {
                 Console.WriteLine();
                 Console.WriteLine(building.GetAddress());
